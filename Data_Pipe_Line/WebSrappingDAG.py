@@ -13,7 +13,7 @@ response = requests.get(url)
 
 # defining the database engine
 username = 'postgres'
-password = 'Ite$iwaju1'
+password = '*****' 
 host = 'localhost'
 database = 'ml'
 port = 5432
