@@ -1,0 +1,13 @@
+dbt_pipeline: 
+  outputs:
+    dev:
+      type: snowflake
+      account: rm76891.europe-west3.gcp
+      user: Jenfa4uall
+      password: Ite$iwaju1
+      role: dbt_user
+      database: DBT_DB
+      warehouse: dbt_wh
+      schema: dbt_schema
+      authenticator: snowflake
+  target: dev

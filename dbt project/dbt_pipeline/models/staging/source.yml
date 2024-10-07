@@ -1,0 +1,22 @@
+version: 2
+
+sources: 
+  - name: tpch
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+    tables:
+      - name: orders
+        -columns:
+            -name: O_ORDERKEY
+            -tests: 
+              - not_null
+              - unique
+      - name: LINEITEM
+        -columns:
+            -name: L_ORDERKEY
+            -tests:
+              - relationships:
+                to: source('tpch','order')
+                field: O_ORDERKEY
+
+
